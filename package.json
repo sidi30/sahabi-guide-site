@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "seo:check": "node scripts/verify-seo.cjs",
+    "seo:report": "node scripts/verify-seo.cjs > seo-report.txt",
+    "seo:update-domain": "node scripts/update-domain.cjs"
   },
   "dependencies": {
     "react": "^18.2.0",

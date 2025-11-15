@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion'
+import { useRef } from 'react'
 import mascotteGuideVideo from '../assets/mascotte_anim_e_repr_sentant_un_guide_de_p_lerinage.mp4'
 import mascotteImage from '../assets/mascott.jpeg'
+import { useVideoAutoplay } from '../hooks/useVideoAutoplay'
 
 export default function MascottePresentation() {
+  const mascotteVideoRef = useRef<HTMLVideoElement>(null)
+  useVideoAutoplay(mascotteVideoRef)
+
   return (
     <section className="py-20 bg-gradient-to-br from-white via-primary-50 to-gold-50 relative overflow-hidden">
       {/* Decorative background */}
@@ -23,6 +28,7 @@ export default function MascottePresentation() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <video 
+                ref={mascotteVideoRef}
                 autoPlay 
                 loop 
                 muted 

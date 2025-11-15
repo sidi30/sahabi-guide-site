@@ -1,0 +1,11 @@
+# Redirections pour Netlify/Vercel
+# Redirection HTTP vers HTTPS
+http://sahabiguide.com/* https://sahabiguide.com/:splat 301!
+http://www.sahabiguide.com/* https://sahabiguide.com/:splat 301!
+
+# Redirection www vers non-www
+https://www.sahabiguide.com/* https://sahabiguide.com/:splat 301!
+
+# Gestion des routes pour SPA (Single Page Application)
+/*    /index.html   200
+

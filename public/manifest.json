@@ -1,0 +1,28 @@
+{
+  "name": "SahabiGuide - Compagnon pour le Hadj et la Omra",
+  "short_name": "SahabiGuide",
+  "description": "Votre compagnon numérique pour un Hadj serein et connecté. Application mobile, assistant IA, bracelet connecté et dashboard pour agences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["lifestyle", "travel", "education"],
+  "lang": "fr-FR",
+  "dir": "ltr"
+}
+

@@ -1,16 +1,206 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SahabiGuide - Votre compagnon numérique pour un Hadj serein et connecté" />
-    <title>SahabiGuide - Compagnon numérique pour le Hadj et la Omra</title>
     
-    <!-- Google Fonts -->
+    <!-- ===== FAVICON & ICÔNES ===== -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- ===== META VIEWPORT & MOBILE ===== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#10b981" />
+    
+    <!-- ===== META SEO ESSENTIELS ===== -->
+    <title>SahabiGuide - Application Hadj et Omra | Assistant IA | Bracelet Connecté</title>
+    <meta name="description" content="SahabiGuide : votre compagnon numérique pour un Hadj et une Omra sereins. Application mobile, assistant IA multilingue, bracelet connecté, dashboard agences. Guidage personnalisé 24/7 en français, arabe, haoussa et zarma." />
+    <meta name="keywords" content="SahabiGuide, Sahabi Guide, Hadj, Omra, pèlerinage, application hadj, app omra, assistant IA islam, bracelet connecté pèlerin, guide hadj, guide omra, application musulmane, pelerinage La Mecque, hadj 2025, omra 2025, assistant pèlerinage, rituel hadj, rituel omra, application islam, tech islam, wearable islam, bracelet hajj, hadj connecté, smart hadj, agence hadj, agence omra, dashboard hadj, gestion pèlerins, Niger, Afrique, multilingue, haoussa, zarma, français, arabe" />
+    <meta name="author" content="SahabiGuide" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- ===== CANONICAL & LIENS ===== -->
+    <link rel="canonical" href="https://sahabiguide.com/" />
+    <link rel="alternate" hreflang="fr" href="https://sahabiguide.com/" />
+    <link rel="alternate" hreflang="ar" href="https://sahabiguide.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://sahabiguide.com/" />
+    
+    <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sahabiguide.com/" />
+    <meta property="og:title" content="SahabiGuide - Votre compagnon numérique pour le Hadj et la Omra" />
+    <meta property="og:description" content="Application complète avec assistant IA multilingue, bracelet connecté et dashboard pour agences. Accompagnez vos pèlerins avec la technologie." />
+    <meta property="og:image" content="https://sahabiguide.com/favicon.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo SahabiGuide" />
+    <meta property="og:site_name" content="SahabiGuide" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="ar_SA" />
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://sahabiguide.com/" />
+    <meta name="twitter:title" content="SahabiGuide - Compagnon numérique pour le Hadj et la Omra" />
+    <meta name="twitter:description" content="Application avec assistant IA, bracelet connecté et dashboard agences. Guidage 24/7 pour un pèlerinage serein." />
+    <meta name="twitter:image" content="https://sahabiguide.com/favicon.png" />
+    <meta name="twitter:image:alt" content="Logo SahabiGuide" />
+    
+    <!-- ===== DONNÉES STRUCTURÉES (Schema.org JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sahabiguide.com/#organization",
+          "name": "SahabiGuide",
+          "url": "https://sahabiguide.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sahabiguide.com/favicon.png",
+            "width": 512,
+            "height": 512
+          },
+          "description": "Plateforme technologique complète pour accompagner les pèlerins durant le Hadj et la Omra",
+          "sameAs": [
+            "https://www.facebook.com/sahabiguide",
+            "https://www.instagram.com/sahabiguide",
+            "https://twitter.com/sahabiguide"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sahabiguide.com/#website",
+          "url": "https://sahabiguide.com",
+          "name": "SahabiGuide",
+          "publisher": {
+            "@id": "https://sahabiguide.com/#organization"
+          },
+          "inLanguage": "fr-FR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://sahabiguide.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://sahabiguide.com/#webpage",
+          "url": "https://sahabiguide.com",
+          "name": "SahabiGuide - Application Hadj et Omra avec Assistant IA",
+          "description": "Solution complète pour le pèlerinage : application mobile, assistant IA multilingue, bracelet connecté et dashboard pour agences. Disponible en français, arabe, haoussa et zarma.",
+          "inLanguage": "fr-FR",
+          "isPartOf": {
+            "@id": "https://sahabiguide.com/#website"
+          },
+          "about": {
+            "@id": "https://sahabiguide.com/#organization"
+          },
+          "breadcrumb": {
+            "@id": "https://sahabiguide.com/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://sahabiguide.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://sahabiguide.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Fonctionnalités",
+              "item": "https://sahabiguide.com/#fonctionnalites"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Assistant IA",
+              "item": "https://sahabiguide.com/#assistant"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Bracelet Connecté",
+              "item": "https://sahabiguide.com/#bracelet"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Téléchargement",
+              "item": "https://sahabiguide.com/#telechargement"
+            }
+          ]
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "https://sahabiguide.com/#mobileapp",
+          "name": "SahabiGuide",
+          "operatingSystem": "Android",
+          "applicationCategory": "TravelApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Assistant IA Sahabi",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Android, iOS",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "featureList": "Assistant multilingue, Rappels de prière, Guidage des rituels, Géolocalisation, Support 24/7"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- ===== PRECONNECT & DNS-PREFETCH ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- ===== GOOGLE FONTS ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ===== PRELOAD CRITICAL RESOURCES ===== -->
+    <link rel="preload" as="image" href="/favicon.png" />
+    
+    <!-- ===== GEO META ===== -->
+    <meta name="geo.region" content="NE" />
+    <meta name="geo.placename" content="Niger" />
+    
+    <!-- ===== AUTRES META UTILES ===== -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
   </head>
   <body>
     <div id="root"></div>

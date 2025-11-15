@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion'
 import { Bot, MessageCircle, Bell, Users } from 'lucide-react'
+import { useRef } from 'react'
 import SectionTitle from '../components/SectionTitle'
 import mediaVideo from '../assets/media2.mp4'
+import { useVideoAutoplay } from '../hooks/useVideoAutoplay'
 
 export default function AssistantAI() {
+  const mediaVideoRef = useRef<HTMLVideoElement>(null)
+  useVideoAutoplay(mediaVideoRef)
+
   const messages = [
     { from: 'user', text: "Quelle est la première étape du Hadj ?" },
     { from: 'bot', text: "La première étape est l'Ihram. C'est l'état de sacralisation que vous devez atteindre avant d'entrer à La Mecque..." },
@@ -106,6 +111,7 @@ export default function AssistantAI() {
             {/* Vidéo de démonstration en arrière-plan */}
             <div className="absolute inset-0 rounded-2xl overflow-hidden opacity-20">
               <video 
+                ref={mediaVideoRef}
                 autoPlay 
                 loop 
                 muted 

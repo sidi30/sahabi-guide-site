@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion'
 import { Download, ChevronDown } from 'lucide-react'
+import { useRef } from 'react'
 import CTAButton from '../components/CTAButton'
 import mascotteVideo from '../assets/logo-anime.mp4'
 import logoVideo from '../assets/logo-anime.mp4'
+import { useVideoAutoplay } from '../hooks/useVideoAutoplay'
 
 export default function Hero() {
+  const mascotteVideoRef = useRef<HTMLVideoElement>(null)
+  const logoVideoRef = useRef<HTMLVideoElement>(null)
+  
+  useVideoAutoplay(mascotteVideoRef)
+  useVideoAutoplay(logoVideoRef)
+
   return (
     <section id="accueil" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-gold-50 pt-20">
       <div className="container mx-auto px-4 py-12 md:py-20">
@@ -76,6 +84,7 @@ export default function Hero() {
                 className="relative z-10 rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl overflow-hidden bg-gradient-to-br from-primary-50 to-gold-50"
               >
                 <video 
+                  ref={mascotteVideoRef}
                   autoPlay 
                   loop 
                   muted 
@@ -93,6 +102,7 @@ export default function Hero() {
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 -z-10 opacity-10"
               >
                 <video 
+                  ref={logoVideoRef}
                   autoPlay 
                   loop 
                   muted 

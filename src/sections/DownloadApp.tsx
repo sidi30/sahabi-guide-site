@@ -1,15 +1,21 @@
 import { motion } from 'framer-motion'
 import { Download, Smartphone } from 'lucide-react'
+import { useRef } from 'react'
 import SectionTitle from '../components/SectionTitle'
 import CTAButton from '../components/CTAButton'
 import logoVideo from '../assets/logo-anime.mp4'
+import { useVideoAutoplay } from '../hooks/useVideoAutoplay'
 
 export default function DownloadApp() {
+  const logoVideoRef = useRef<HTMLVideoElement>(null)
+  useVideoAutoplay(logoVideoRef)
+
   return (
     <section id="telechargement" className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white relative overflow-hidden">
       {/* Background Video Pattern */}
       <div className="absolute inset-0 opacity-10">
         <video 
+          ref={logoVideoRef}
           autoPlay 
           loop 
           muted 

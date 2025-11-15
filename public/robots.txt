@@ -1,0 +1,10 @@
+# robots.txt pour SahabiGuide
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sahabiguide.com/sitemap.xml
+
+# Optimisation crawl
+Crawl-delay: 0
+
